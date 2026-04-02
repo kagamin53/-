@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W杯2026 AI ラボ ⚽🤖</title>
+    <meta name="description" content="AIがワールドカップ2026を完全分析！優勝予想、選手診断、戦術提案、応援カード生成">
+    <meta property="og:title" content="W杯2026 AI ラボ">
+    <meta property="og:description" content="AIがあなたのW杯体験を変える。予想・診断・戦術・応援、全部AIにおまかせ！">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">W杯AI<span>ラボ</span></a>
+            <div class="nav-links">
+                <a href="#predictor" data-feature="predictor">🔮 AI予言</a>
+                <a href="#diagnosis" data-feature="diagnosis">🧬 選手診断</a>
+                <a href="#manager" data-feature="manager">🤖 AI監督</a>
+                <a href="#card" data-feature="card">📸 応援カード</a>
+                <a href="#chat" data-feature="chat">💬 AI解説</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="メニュー">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="floating-ball">⚽</div>
+            <div class="floating-ball ball-2">⚽</div>
+            <div class="floating-ball ball-3">⚽</div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-subtitle">FIFA WORLD CUP 2026</p>
+            <h1 class="hero-title">W杯<span class="gradient-text">AI</span>ラボ</h1>
+            <p class="hero-desc">AIがあなたのワールドカップ体験を変える。<br>予想・診断・戦術・応援、全部おまかせ。</p>
+            <div class="hero-countdown" id="countdown"></div>
+            <div class="hero-features">
+                <a href="#predictor" class="feature-card" data-feature="predictor">
+                    <span class="feature-icon">🔮</span>
+                    <h3>AI予言者</h3>
+                    <p>AIの優勝予想と<br>あなたの予想眼を比較</p>
+                </a>
+                <a href="#diagnosis" class="feature-card" data-feature="diagnosis">
+                    <span class="feature-icon">🧬</span>
+                    <h3>選手DNA診断</h3>
+                    <p>AIがあなたの<br>サッカータイプを分析</p>
+                </a>
+                <a href="#manager" class="feature-card" data-feature="manager">
+                    <span class="feature-icon">🤖</span>
+                    <h3>AI監督</h3>
+                    <p>フォーメーションを組んで<br>AIに戦術分析してもらう</p>
+                </a>
+                <a href="#card" class="feature-card" data-feature="card">
+                    <span class="feature-icon">📸</span>
+                    <h3>応援カード</h3>
+                    <p>AIが推しチームの<br>応援カードを生成</p>
+                </a>
+                <a href="#chat" class="feature-card" data-feature="chat">
+                    <span class="feature-icon">💬</span>
+                    <h3>AI解説者</h3>
+                    <p>W杯のこと何でも聞ける<br>AIサッカー博士</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Predictor Section -->
+    <section id="predictor" class="page-section hidden">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-icon">🔮</span>
+                <h2>AI予言者</h2>
+                <p>AIが全試合を分析。あなたの予想とどれだけ一致する？</p>
+            </div>
+            <div class="predictor-tabs">
+                <button class="tab-btn active" data-tab="ai-prediction">AIの予想</button>
+                <button class="tab-btn" data-tab="my-prediction">あなたの予想</button>
+                <button class="tab-btn" data-tab="compare">比較結果</button>
+            </div>
+            <div id="ai-prediction" class="tab-content active">
+                <div class="ai-bracket" id="ai-bracket"></div>
+            </div>
+            <div id="my-prediction" class="tab-content">
+                <p class="prediction-instruction">各グループの1位・2位を予想してください</p>
+                <div class="groups-grid" id="groups-grid"></div>
+                <button class="btn-primary" id="submit-prediction" disabled>予想を確定して比較する</button>
+            </div>
+            <div id="compare" class="tab-content">
+                <div id="compare-result" class="compare-result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Player DNA Diagnosis Section -->
+    <section id="diagnosis" class="page-section hidden">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-icon">🧬</span>
+                <h2>選手DNA診断</h2>
+                <p>7つの質問に答えるだけ。AIがあなたのサッカーDNAを解析します。</p>
+            </div>
+            <div id="quiz-container">
+                <div class="quiz-progress">
+                    <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
+                </div>
+                <div id="quiz-question" class="quiz-question"></div>
+                <div id="quiz-options" class="quiz-options"></div>
+            </div>
+            <div id="diagnosis-result" class="diagnosis-result hidden">
+                <div class="result-card-wrapper">
+                    <canvas id="diagnosis-canvas" width="600" height="800"></canvas>
+                </div>
+                <div class="result-details" id="result-details"></div>
+                <div class="share-buttons">
+                    <button class="btn-share btn-x" id="share-diagnosis-x">𝕏 でシェア</button>
+                    <button class="btn-share btn-download" id="download-diagnosis">画像を保存</button>
+                    <button class="btn-primary" id="retry-diagnosis">もう一度診断する</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Manager Section -->
+    <section id="manager" class="page-section hidden">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-icon">🤖</span>
+                <h2>AI監督</h2>
+                <p>フォーメーションを選んで選手を配置。AIが戦術を分析します。</p>
+            </div>
+            <div class="manager-layout">
+                <div class="formation-selector">
+                    <h3>フォーメーション選択</h3>
+                    <div class="formation-options" id="formation-options"></div>
+                </div>
+                <div class="pitch-container">
+                    <div class="pitch" id="pitch"></div>
+                </div>
+                <div class="player-selector">
+                    <h3>選手を選択</h3>
+                    <input type="text" id="player-search" placeholder="選手名で検索..." class="search-input">
+                    <div class="player-list" id="player-list"></div>
+                </div>
+            </div>
+            <button class="btn-primary" id="analyze-btn" disabled>AIに戦術分析してもらう</button>
+            <div id="analysis-result" class="analysis-result hidden"></div>
+        </div>
+    </section>
+
+    <!-- Support Card Generator Section -->
+    <section id="card" class="page-section hidden">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-icon">📸</span>
+                <h2>応援カード</h2>
+                <p>推しチームを選んで、AIが応援カードを生成！</p>
+            </div>
+            <div class="card-generator">
+                <div class="team-selector-grid" id="team-selector-grid"></div>
+                <div class="card-options hidden" id="card-options">
+                    <h3>カードスタイル</h3>
+                    <div class="style-options">
+                        <button class="style-btn active" data-style="fire">🔥 熱血</button>
+                        <button class="style-btn" data-style="cool">❄️ クール</button>
+                        <button class="style-btn" data-style="funny">😂 おもしろ</button>
+                        <button class="style-btn" data-style="poetic">✨ ポエム</button>
+                    </div>
+                    <button class="btn-primary" id="generate-card-btn">カードを生成する</button>
+                </div>
+                <div class="card-preview hidden" id="card-preview">
+                    <canvas id="card-canvas" width="600" height="800"></canvas>
+                    <div class="share-buttons">
+                        <button class="btn-share btn-x" id="share-card-x">𝕏 でシェア</button>
+                        <button class="btn-share btn-download" id="download-card">画像を保存</button>
+                        <button class="btn-primary" id="regenerate-card">別のカードを作る</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chat Section -->
+    <section id="chat" class="page-section hidden">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-icon">💬</span>
+                <h2>AI解説者</h2>
+                <p>W杯の歴史、選手、戦術...何でも聞いてください！</p>
+            </div>
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="chat-msg bot">
+                        <div class="chat-avatar">🤖</div>
+                        <div class="chat-bubble">こんにちは！W杯AIアナリストです。ワールドカップについて何でも聞いてください！<br><br>例えば...<br>「2026年大会の注目チームは？」<br>「歴代最多得点者は誰？」<br>「日本代表の戦力分析して」</div>
+                    </div>
+                </div>
+                <div class="chat-suggestions" id="chat-suggestions">
+                    <button class="suggestion-btn">日本代表の戦力は？</button>
+                    <button class="suggestion-btn">優勝候補はどこ？</button>
+                    <button class="suggestion-btn">注目の若手選手は？</button>
+                    <button class="suggestion-btn">開催都市を教えて</button>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="W杯について質問..." class="chat-input">
+                    <button id="chat-send" class="chat-send-btn">送信</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>W杯2026 AIラボ | Built with AI by <a href="https://x.com/Neuro__Flow" target="_blank">@Neuro__Flow</a></p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
