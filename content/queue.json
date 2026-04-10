@@ -1,1 +1,142 @@
-[]
+[
+  {
+    "content": "【2026年のAI開発、ここまで来た】\n\nコードを書くのはAI、レビューするのもAI。\n人間がやるのは「何を作るか」を決めることだけ。\n\nこの1年でエンジニアの仕事の定義が完全に変わった。\n\n変化に適応できる人が、次の10年を作る。\n\n#AI #エンジニア",
+    "category": "opinion",
+    "slot": "morning"
+  },
+  {
+    "content": "AIツール、無料で使えるのに知られてないやつ多すぎる。\n\n最近のお気に入り:\n✅ Claude - 長文分析と推論が最強\n✅ Cursor - AIコードエディタ\n✅ Perplexity - AI検索\n✅ NotebookLM - 資料分析\n✅ v0 - プロンプトからUI生成\n\n全部無料で始められます。\n\n#AI #無料ツール",
+    "category": "list",
+    "slot": "evening"
+  },
+  {
+    "content": "Cursor、これマジで便利。\n\nAIがプロジェクト全体を理解した上でコードを補完してくれる。\n\n使ってみた感想:\n✅ 「この関数リファクタして」が通じる\n✅ ファイル横断で文脈を理解\n⚠️ 無料枠だと回数制限あり\n\nコード書く人は全員試す価値あり。\n\n#AI #Cursor #開発ツール",
+    "category": "tool",
+    "slot": "morning"
+  },
+  {
+    "content": "「AIに仕事を奪われる」って言われるけど、\n実際に奪われるのは「AIを使わない人の仕事」だと思う。\n\nAIで作業時間が半分になった分、\n企画や戦略に時間を使えるようになった。\n\nツールは使い手次第。\nまず触ってみることが一番の対策。\n\n#AI #働き方",
+    "category": "opinion",
+    "slot": "evening"
+  },
+  {
+    "content": "ChatGPTとClaudeの使い分け、こうしてる。\n\n🔵 ChatGPT:\n・画像生成やブラウジング\n・プラグインとの連携\n・カジュアルな会話\n\n🟠 Claude:\n・長文の分析と要約\n・コードの生成とレビュー\n・論理的な推論タスク\n\n用途によって使い分けるのが正解。\n\n#ChatGPT #Claude #AI",
+    "category": "comparison",
+    "slot": "morning"
+  },
+  {
+    "content": "プロンプトの書き方で出力が10倍変わる話。\n\n❌ 「Pythonのコードを書いて」\n⭕ 「あなたはPython歴10年のシニアエンジニアです。以下の要件でコードを書いてください」\n\n役割を指定するだけで、出力の質が明らかに変わる。\n\n1分でできる改善なので今すぐ試してみて。\n\n#AI #プロンプト #ChatGPT",
+    "category": "tool",
+    "slot": "evening"
+  },
+  {
+    "content": "AIエージェント、2026年の本命テーマ。\n\n単発の質問応答じゃなく、\n複数ステップの仕事を自律的にこなすAI。\n\n・メール対応の自動化\n・コードの設計→実装→テスト\n・リサーチ→レポート作成\n\n「指示を出す」から「任せる」へ。\nAIとの付き合い方が変わる年。\n\n#AI #AIエージェント",
+    "category": "news",
+    "slot": "morning"
+  },
+  {
+    "content": "新しいAIツールを3時間触り続けて、\n気づいたら深夜2時だった。\n\n「これ面白い」で始めたはずが\nいつの間にか本気で検証してた。\n\nテック好きあるある。\n\n#エンジニア #AI",
+    "category": "daily",
+    "slot": "evening"
+  },
+  {
+    "content": "エンジニアが今すぐ学ぶべきAIスキル 5選\n\n① プロンプトエンジニアリング\n② RAG（検索拡張生成）の設計\n③ AIエージェントの構築\n④ LLMのファインチューニング\n⑤ AI製品のUI/UX設計\n\n全部ゼロから学べる時代。\n始めるなら今。\n\n#AI #エンジニア #スキルアップ",
+    "category": "list",
+    "slot": "morning"
+  },
+  {
+    "content": "RAGって何？を一言で説明すると、\n\n「AIに自分のデータを読ませてから回答させる技術」\n\n普通のChatGPT → 学習済みの知識だけで回答\nRAG付きAI → あなたの社内資料も踏まえて回答\n\n企業でのAI活用で最も実用的な技術。\n\n#AI #RAG #LLM",
+    "category": "opinion",
+    "slot": "evening"
+  },
+  {
+    "content": "GitHub Copilot vs Cursor vs Cline\nAIコーディングツールを比較してみた。\n\n🟢 Copilot: 補完が速い、VS Code統合が自然\n🟡 Cursor: プロジェクト全体を理解、チャットが強い\n🔵 Cline: 自律的にファイル操作、エージェント型\n\n個人的にはCursorメイン + Clineでタスク投げが最強。\n\n#AI #開発ツール",
+    "category": "comparison",
+    "slot": "morning"
+  },
+  {
+    "content": "AIで作業効率が上がった具体例:\n\n📝 議事録作成: 1時間 → 5分\n💻 コードレビュー: 30分 → 5分\n📊 データ分析: 半日 → 1時間\n📧 メール文作成: 15分 → 2分\n🔍 リサーチ: 3時間 → 30分\n\n合計で1日2〜3時間は浮いてる。\nまだ使ってない人、本当にもったいない。\n\n#AI #生産性",
+    "category": "list",
+    "slot": "evening"
+  },
+  {
+    "content": "Perplexity AI、検索の概念が変わる。\n\nGoogle検索:\n→ リンクが並ぶ → 1つずつ開く → 情報を探す\n\nPerplexity:\n→ 質問する → ソース付きで回答が出る → 終了\n\n調べ物の時間が体感1/5になった。\n\n無料で使えるので、まず1回試してみて。\n\n#AI #Perplexity #検索",
+    "category": "tool",
+    "slot": "morning"
+  },
+  {
+    "content": "AIを使い始めて1年。\n一番変わったのは「スキル」じゃなくて「考え方」。\n\n以前: 全部自分でやらなきゃ\n今: これはAIに任せて、自分は判断に集中\n\n完璧主義を手放して、\n「AIと協力する」思考に切り替えたら\n仕事の質も速さも上がった。\n\n#AI #マインドセット",
+    "category": "daily",
+    "slot": "evening"
+  },
+  {
+    "content": "【知っておくべき】AI関連の用語、最低限これだけ。\n\n・LLM = 大規模言語モデル\n・RAG = 外部データを読ませて回答精度UP\n・ファインチューニング = AIを特定用途に訓練\n・プロンプト = AIへの指示文\n・ハルシネーション = AIの嘘/でっちあげ\n\n知ってるだけで会話についていける。\n\n#AI #用語解説",
+    "category": "list",
+    "slot": "morning"
+  },
+  {
+    "content": "AIに「要約して」と言うのはもったいない。\n\n❌ 「この記事を要約して」\n⭕ 「この記事を、エンジニア向けに、箇条書き5点で、各30文字以内で要約して」\n\n出力形式を具体的に指定するだけで、\n使える要約が返ってくる。\n\nプロンプトは「具体的であるほど強い」。\n\n#AI #プロンプト",
+    "category": "tool",
+    "slot": "evening"
+  },
+  {
+    "content": "オープンソースLLMの進化がすごい。\n\nLlama、Mistral、Gemma...\n企業の内部データを外に出さずにAIを活用できる時代。\n\nクラウドAPI → 手軽だけどデータが外に出る\nローカルLLM → 構築は大変だけどデータは手元\n\nセキュリティ重視の企業は後者が必須になる。\n\n#AI #オープンソース #LLM",
+    "category": "news",
+    "slot": "morning"
+  },
+  {
+    "content": "今日は半日かけて新しいAIエージェントを自作してみた。\n\n想定: 2時間で完成\n現実: 6時間かかった\n\nでもその過程で学んだことが多すぎた。\n\n・APIの制限の把握\n・エラーハンドリングの設計\n・プロンプトの試行錯誤\n\n手を動かすのが最速の学習法。\n\n#AI #開発 #学習記録",
+    "category": "daily",
+    "slot": "evening"
+  },
+  {
+    "content": "NotebookLM、論文読むのに革命的。\n\n100ページのPDFをアップロード → 内容を質問するだけ。\n\n使ってみた感想:\n✅ 引用元のページ番号付きで回答\n✅ 要約の精度が高い\n✅ 日本語の論文もOK\n⚠️ Googleアカウント必要\n\n研究者・学生は必須ツール。\n\n#AI #NotebookLM #研究",
+    "category": "tool",
+    "slot": "morning"
+  },
+  {
+    "content": "5年後のAI予測、個人的な見解。\n\n・コードの90%はAIが書く\n・AIエージェントが「同僚」になる\n・検索エンジンは対話型に完全移行\n・クリエイティブ職はAI活用が前提に\n・「AI非対応」は競争力を失う\n\n変化は想像より速い。\n今から準備する人が勝つ。\n\n#AI #未来予測",
+    "category": "opinion",
+    "slot": "evening"
+  },
+  {
+    "content": "Claude Code、ターミナルから直接AIとコーディングできる。\n\nファイルの読み書き、git操作、テスト実行まで全部AIがやってくれる。\n\n✅ プロジェクト全体を理解した上で修正\n✅ 複数ファイルの同時編集\n✅ コマンドライン完結\n\nCLI派のエンジニアには刺さると思う。\n\n#AI #ClaudeCode #開発ツール",
+    "category": "tool",
+    "slot": "morning"
+  },
+  {
+    "content": "AIを「使う人」と「使われる人」の差が開いてる。\n\n使う人:\n→ AIに下書きを任せて、判断と仕上げに集中\n→ 1人で3人分のアウトプット\n\n使われる人:\n→ AIが出した結果をそのままコピペ\n→ クオリティが安定しない\n\n差が出るのは「最後の仕上げ」にある。\n\n#AI #仕事術",
+    "category": "opinion",
+    "slot": "evening"
+  },
+  {
+    "content": "v0 by Vercel、プロンプトだけでUIが生成できる。\n\n「ダッシュボード画面を作って」\n→ React + Tailwindのコードが即座に出てくる\n\n使ってみた感想:\n✅ デザインのクオリティが高い\n✅ コードがそのまま使える\n⚠️ 複雑なロジックは手動調整が必要\n\nプロトタイプ作成が爆速になる。\n\n#AI #v0 #Vercel",
+    "category": "tool",
+    "slot": "morning"
+  },
+  {
+    "content": "今週のAI学び振り返り。\n\n月: AIエージェントの設計パターンを調査\n火: LangChain触ってみた → 便利だけど複雑\n水: RAGのチャンクサイズで精度が大きく変わると判明\n木: プロンプト改善で回答精度20%向上\n金: まとめ記事を書いた\n\n手を動かした分だけ理解が深まる。\n来週も実験する。\n\n#AI #学習記録",
+    "category": "daily",
+    "slot": "evening"
+  },
+  {
+    "content": "GPT-4o vs Gemini vs Claude\n同じ質問で回答を比較してみた。\n\n📊 事実の正確性: Claude > GPT-4o > Gemini\n🎨 創造性: GPT-4o > Claude > Gemini\n🔍 検索連携: Gemini > GPT-4o > Claude\n💻 コード生成: Claude > GPT-4o > Gemini\n\n※あくまで個人の検証結果です\n\n用途に合わせて選ぶのがベスト。\n\n#AI #比較 #LLM",
+    "category": "comparison",
+    "slot": "morning"
+  },
+  {
+    "content": "マルチモーダルAI、地味に実用的。\n\n最近やったこと:\n・手書きメモを写真撮影 → テキスト化\n・グラフのスクショ → データの解説\n・エラー画面をキャプチャ → 原因分析\n\n「言葉で説明するのが面倒」な時に、\n画像を貼るだけでAIが理解してくれる。\n\n時短効果がすごい。\n\n#AI #マルチモーダル",
+    "category": "tool",
+    "slot": "evening"
+  },
+  {
+    "content": "AI時代のエンジニアに必要なのは、\n「コードを書く力」より「問題を定義する力」。\n\nコードはAIが書いてくれる。\nでも「何を解決すべきか」はAIには分からない。\n\n・顧客の本当の課題は何か\n・技術的にどうアプローチするか\n・何を優先して作るか\n\nここに価値が集中していく。\n\n#AI #エンジニア",
+    "category": "opinion",
+    "slot": "morning"
+  },
+  {
+    "content": "Bolt.new、プロンプトだけでWebアプリが作れる。\n\n「ToDoアプリを作って」→ 本当にデプロイ可能なアプリが出てくる。\n\n使ってみた感想:\n✅ フロントもバックエンドも一発生成\n✅ そのままデプロイできる\n⚠️ 細かいカスタマイズは手動\n\nプロトタイプ → 検証のサイクルが圧倒的に速くなる。\n\n#AI #Bolt #WebDev",
+    "category": "tool",
+    "slot": "evening"
+  }
+]
