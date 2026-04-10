@@ -1,0 +1,72 @@
+name: Auto Post to X
+
+on:
+  schedule:
+    # Morning post: 7:00 JST = 22:00 UTC (previous day)
+    - cron: "0 22 * * *"
+    # Evening post: 20:00 JST = 11:00 UTC
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Time slot (morning/evening)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Dry run (don't actually post)"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine slot
+        id: slot
+        run: |
+          if [ -n "${{ github.event.inputs.slot }}" ]; then
+            echo "slot=${{ github.event.inputs.slot }}" >> $GITHUB_OUTPUT
+          else
+            HOUR=$(TZ=Asia/Tokyo date +%H)
+            if [ "$HOUR" -lt 12 ]; then
+              echo "slot=morning" >> $GITHUB_OUTPUT
+            else
+              echo "slot=evening" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Post to X
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: |
+          ARGS="${{ steps.slot.outputs.slot }}"
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          python scripts/post_to_x.py $ARGS
+
+      - name: Commit queue changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/queue.json content/posted.json
+          git diff --staged --quiet || git commit -m "auto: update queue after posting"
+          git push
